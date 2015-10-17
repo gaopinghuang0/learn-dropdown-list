@@ -64,24 +64,48 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 600px;
   height: 40px;
 }
-#nav ul {
+
+.first-level {
   list-style: none;
 }
-#nav ul li {
+.first-level li {
   float: left;
+  position: relative;
   line-height: 40px;
   text-align: center;
 }
-
-a {
+.first-level li:hover .second-level {
+  display: block;
+}
+.first-level a {
   text-decoration: none;
   color: #000;
   display: block;
   padding: 0 10px;
+  height: 40px;
 }
-a:hover {
+.first-level a:hover {
   color: #fff;
   background-color: #666;
+}
+
+.second-level {
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  display: none;
+}
+.second-level li {
+  float: none;
+  background-color: #eee;
+  margin-top: 2px;
+}
+.second-level li a {
+  width: 80px;
+}
+.second-level li a:hover {
+  background-color: #80C3F7;
+  color: #fff;
 }
 
 /*# sourceMappingURL=screen.css.map */

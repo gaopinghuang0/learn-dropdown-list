@@ -3,34 +3,64 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
-@import "compass/css3";
+ @import "compass/reset";
+ @import "compass/css3";
 
-#nav {
-	background-color: #eee;
-	margin: 0 auto;
-	width: 600px;
-	height: 40px;
+ #nav {
+ 	background-color: #eee;
+ 	margin: 0 auto;
+ 	width: 600px;
+ 	height: 40px;
 
-	ul {
-		list-style: none;
+ }
 
-		li {
-			float: left;
-			line-height: 40px;
-			text-align: center;
-		}
-	}
-}
 
-a {
-	text-decoration: none;
-	color: #000;
-	display: block;
-	padding: 0 10px;
+ .first-level {
+ 	list-style: none;
 
-	&:hover {
-		color: #fff;
-		background-color: #666;
-	}
-}
+ 	li {
+ 		float: left;
+ 		position: relative;
+ 		line-height: 40px;
+ 		text-align: center;
+
+ 		&:hover .second-level {
+ 			display: block;
+ 		}
+ 	}
+
+ 	a {
+ 		text-decoration: none;
+ 		color: #000;
+ 		display: block;
+ 		padding: 0 10px;
+ 		height: 40px;
+
+ 		&:hover {
+ 			color: #fff;
+ 			background-color: #666;
+ 		}
+ 	}
+ }
+
+ .second-level {
+ 	position: absolute;
+ 	left: 0px;
+ 	top: 40px;
+ 	display: none;
+
+ 	li {
+ 		float: none;
+ 		background-color: #eee;
+ 		margin-top: 2px;
+
+ 		a {
+ 			width: 80px;
+
+ 			&:hover {
+ 				background-color: #80C3F7;
+ 				color: #fff;
+ 			}
+ 		}
+ 	}
+ }
