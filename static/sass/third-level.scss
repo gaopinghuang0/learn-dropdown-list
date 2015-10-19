@@ -1,0 +1,58 @@
+ @import "compass/reset";
+ @import "compass/css3";
+
+ #nav {
+ 	margin: 0 auto;
+ 	width: 800px;
+ }
+
+ .first-level {
+ 	font-size: 16px;
+ 	list-style: none;
+ 	font-weight: bold;
+
+ 	li {
+ 		float: left;
+ 		margin-right: 1px;
+
+ 		a {
+ 			text-align: center;
+ 			line-height: 24px;
+ 			background-color: #ddd;
+ 			width: 140px;
+ 			text-decoration: none;
+ 			display: block;
+ 			color: #666;
+
+ 			&:hover {
+ 				background-color: #80C3F7;
+ 				color: #fff;
+ 			}
+ 		}
+ 		&:hover .second-level {
+ 			display: block;
+ 		}
+
+ 		&:hover .third-level {
+ 			display: none;
+ 		}
+ 	}
+ }
+
+ .second-level {
+ 	position: relative;
+ 	display: none;
+
+ 	li {
+ 		float: none;
+ 		margin-bottom: 1px;
+
+ 		&:hover .third-level {
+ 			display: block;
+ 			position: absolute;
+ 			top: 0;
+ 			left: 140px;
+ 		}
+ 	}
+ }
+

@@ -1,7 +1,3 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -59,50 +55,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 #nav {
-  background-color: #eee;
   margin: 0 auto;
-  width: 600px;
-  height: 40px;
+  width: 800px;
 }
 
 .first-level {
+  font-size: 16px;
   list-style: none;
+  font-weight: bold;
 }
 .first-level li {
   float: left;
-  position: relative;
-  line-height: 40px;
+  margin-right: 1px;
+}
+.first-level li a {
   text-align: center;
-}
-.first-level a {
+  line-height: 24px;
+  background-color: #ddd;
+  width: 140px;
   text-decoration: none;
-  color: #000;
   display: block;
-  padding: 0 10px;
-  height: 40px;
+  color: #666;
 }
-.first-level a:hover {
+.first-level li a:hover {
+  background-color: #80C3F7;
   color: #fff;
-  background-color: #666;
+}
+.first-level li:hover .second-level {
+  display: block;
+}
+.first-level li:hover .third-level {
+  display: none;
 }
 
 .second-level {
-  position: absolute;
-  left: 0px;
-  top: 40px;
+  position: relative;
   display: none;
 }
 .second-level li {
   float: none;
-  background-color: #eee;
-  margin-top: 2px;
+  margin-bottom: 1px;
 }
-.second-level li a {
-  width: 80px;
-}
-.second-level li a:hover {
-  background-color: #80C3F7;
-  color: #fff;
+.second-level li:hover .third-level {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 140px;
 }
 
-/*# sourceMappingURL=screen.css.map */
+/*# sourceMappingURL=third-level.css.map */
